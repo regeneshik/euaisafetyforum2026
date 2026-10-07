@@ -293,8 +293,7 @@ document.getElementById('regForm').addEventListener('submit', async e => {
       'Dietary requirements: ' + (data.dietary || '-'),
       'Notes: ' + (data.notes || '-')
     ];
-    location.href = 'mailto:mail@aisafetyaachen.org?subject=' + encodeURIComponent('Registration: EU AI Safety Forum 2026, ' + data.name) + '&body=' + encodeURIComponent(lines.join('
-'));
+    location.href = 'mailto:mail@aisafetyaachen.org?subject=' + encodeURIComponent('Registration: EU AI Safety Forum 2026, ' + data.name) + '&body=' + encodeURIComponent(lines.join('\n'));
     document.querySelector('#regDone p').textContent = 'Your email app should have opened with your registration. Please send that email to complete it. If nothing opened, write to mail@aisafetyaachen.org.';
   }
   e.target.hidden = true;
