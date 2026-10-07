@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>EU AI Safety Forum 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
+<style>
+:root {
+  --page: #dbe7f3;
+  --sheet: #f6f9fc;
+  --card: #ffffff;
+  --navy: #13396b;
+  --blue: #1f6fae;
+  --ink: #1c2430;
+  --ink-2: #556273;
+  --ink-3: #8592a3;
+  --soft: #e6eff8;
+  --line: #dde5ee;
+  --font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --page: #0f1824; --sheet: #142030; --card: #1a283b; --navy: #a9c8f3; --blue: #8db6ee;
+    --ink: #e6ecf3; --ink-2: #a9b4c2; --ink-3: #7c8899; --soft: #1d2f47; --line: #2a3a50;
+  }
+}
+:root[data-theme="dark"] {
+  --page: #0f1824; --sheet: #142030; --card: #1a283b; --navy: #a9c8f3; --blue: #8db6ee;
+  --ink: #e6ecf3; --ink-2: #a9b4c2; --ink-3: #7c8899; --soft: #1d2f47; --line: #2a3a50;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+body { margin: 0; background: var(--page); color: var(--ink); font: 400 16px/1.6 var(--font); }
+.sheet { width: min(860px, 100%); margin: 0 auto; background: var(--sheet); padding: 56px 16px 40px; }
+.inner { max-width: 720px; margin: 0 auto; }
+a { color: var(--blue); }
+h2 { color: var(--blue); font-weight: 400; font-size: 1.75rem; margin: 52px 0 14px; }
+h3 { color: var(--navy); font-size: 1.05rem; margin: 24px 0 6px; }
+p { margin: 0 0 12px; }
+
+/* header */
+header { text-align: center; }
+.logo { display: block; width: min(380px, 85%); height: auto; margin: 0 auto; }
+.date { color: var(--blue); font-size: 1.15rem; margin-top: 26px; }
+.lede { color: var(--ink-2); max-width: 46ch; margin: 10px auto 0; }
+
+/* register card */
+.register { display: flex; align-items: center; justify-content: space-between; gap: 16px 24px; flex-wrap: wrap;
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 22px; margin-top: 32px; text-align: left; }
+.register .txt b { display: block; color: var(--navy); }
+.register .txt span { color: var(--ink-2); font-size: 0.9rem; }
+.btn { display: inline-block; background: var(--navy); color: #fff; font: 600 0.95rem/1 var(--font); padding: 14px 26px; border-radius: 8px; text-decoration: none; white-space: nowrap; }
+.btn:hover { background: var(--blue); }
+@media (max-width: 520px) { .register .btn { width: 100%; text-align: center; } }
+
+/* photos */
+.hero-photo { width: 100%; aspect-ratio: 16 / 8; object-fit: cover; border-radius: 10px; display: block; margin-top: 24px; }
+.photos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 0 0 20px; }
+.photos img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; display: block; }
+@media (max-width: 600px) { .photos { grid-template-columns: 1fr; } }
+
+/* program: self-contained schedule box */
+.prog { border: 1px solid #c9d7e6; border-radius: 12px; overflow: hidden; background: var(--card); font-size: 0.95rem; line-height: 1.4; }
+.prog .head span { padding: 0 16px; }
+.prog .head { background: var(--navy); color: #fff; font-weight: 600; padding: 10px 0; display: grid; grid-template-columns: 136px 1fr; }
+.slot { display: grid; grid-template-columns: 136px 1fr; border-top: 1px solid #dbe5f0; }
+.slot .t { background: #eef4fa; color: var(--navy); font-size: 0.86rem; font-weight: 500; font-variant-numeric: tabular-nums; padding: 11px 16px; display: flex; align-items: center; white-space: nowrap; }
+.slot .c { padding: 11px 16px; text-align: center; }
+.slot b { display: block; font-weight: 600; color: var(--ink); }
+.slot .who { display: block; color: var(--ink-2); font-size: 0.88rem; font-style: italic; }
+.slot.minor .c { color: var(--ink-3); font-size: 0.86rem; padding-top: 6px; padding-bottom: 6px; background: #f7fafd; }
+.slot.minor .t { padding-top: 6px; padding-bottom: 6px; color: var(--ink-2); font-weight: 400; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .prog { border-color: var(--line); }
+  :root:not([data-theme="light"]) .slot { border-color: var(--line); }
+  :root:not([data-theme="light"]) .slot .t { background: var(--soft); }
+  :root:not([data-theme="light"]) .slot.minor .c { background: transparent; } }
+@media (max-width: 520px) { .prog .head, .slot { grid-template-columns: 112px 1fr; } .slot .t, .slot .c, .prog .head { padding-left: 10px; padding-right: 10px; } }
+
+/* last year */
+.past { display: grid; grid-template-columns: 1.6fr 1fr; gap: 8px; margin-bottom: 12px; }
+.past img { width: 100%; height: 300px; object-fit: cover; border-radius: 8px; display: block; }
+@media (max-width: 600px) { .past { grid-template-columns: 1fr; } .past img { height: 220px; } }
+
+/* guest list */
+.label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); margin: 28px 0 4px; }
+.label:first-of-type { margin-top: 0; }
+.people { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; column-gap: 28px; }
+.people li { padding: 10px 0; border-bottom: 1px solid var(--line); }
+.people b { display: block; font-weight: 600; }
+.people span { color: var(--ink-2); font-size: 0.88rem; }
+@media (max-width: 600px) { .people { grid-template-columns: 1fr; } }
+
+.muted-note { color: var(--ink-2); font-size: 0.9rem; }
+ul.plain { padding-left: 20px; margin: 0 0 12px; }
+ul.plain li { margin-bottom: 4px; }
+footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--ink-3); font-size: 0.85rem; text-align: center; }
+
+:root{--font:'Inter',system-ui,sans-serif;--page:#ffffff;--sheet:#ffffff;}
+.sheet{padding-top:8px}
+h2{font-weight:700;letter-spacing:-.02em;color:var(--navy);font-size:1.6rem}
+.banner .logo{width:min(320px,80%);height:auto;display:block;margin:0 auto}
+.banner .when{margin-top:18px;font-weight:600;color:#13396b}
+.banner .lede{color:#3c4a5c;max-width:44ch;margin:8px auto 0;font-size:.98rem}
+.banner .btn{margin-top:20px}
+.banner small{display:block;margin-top:8px;color:#5d6b7c;font-size:.8rem}
+
+.banner{display:flex;align-items:center;justify-content:center;min-height:clamp(560px,80vh,760px);padding:56px 16px;background:url("https://images.squarespace-cdn.com/content/v1/5a7c4b7fa9db098b35e485f4/e131700d-9a91-4e5b-840e-fe6b870e1b75/Quartier+Papier+01.jpg?format=2500w") center 62%/cover no-repeat}
+.banner .bwrap{background:rgba(255,255,255,.95);width:min(600px,100%);border-radius:16px;padding:44px 40px;box-shadow:0 12px 36px rgba(10,30,60,.2);text-align:center}
+.banner .logo{width:min(400px,90%)}
+.banner .when{font-size:1.1rem;margin-top:22px}
+.banner .lede{font-size:1.05rem}
+@media (max-width:760px){.banner{background-position:60% 70%}.banner .bwrap{padding:32px 22px}}
+
+
+/* registration dialog */
+dialog.reg{border:0;border-radius:16px;padding:0;width:min(560px,calc(100% - 32px));max-height:calc(100vh - 32px);box-shadow:0 20px 60px rgba(10,30,60,.3);background:var(--card);color:var(--ink)}
+dialog.reg::backdrop{background:rgba(10,30,60,.45)}
+.reg form{padding:28px 28px 24px}
+.reg h2{margin:0 0 4px;font-size:1.5rem}
+.reg .sub{color:var(--ink-2);font-size:.9rem;margin-bottom:18px}
+.reg label{display:block;font-size:.85rem;font-weight:600;color:var(--ink);margin:14px 0 6px}
+.reg label span{font-weight:400;color:var(--ink-3)}
+.reg input[type=text],.reg input[type=email],.reg input[type=number],.reg textarea{width:100%;font:inherit;font-size:.95rem;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--sheet);color:var(--ink)}
+.reg textarea{min-height:64px;resize:vertical}
+.reg input:focus,.reg textarea:focus{outline:2px solid var(--blue);outline-offset:-1px}
+.reg .choice{display:flex;gap:18px;font-size:.92rem}
+.reg .choice label{display:flex;align-items:center;gap:6px;font-weight:400;margin:0}
+.reg .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.reg .travel{display:none}
+.reg .travel.on{display:block}
+.reg .actions{display:flex;justify-content:space-between;align-items:center;margin-top:22px;gap:12px}
+.reg .close{background:none;border:0;color:var(--ink-2);font:inherit;cursor:pointer}
+.reg button.btn{border:0;cursor:pointer}
+.reg .done{padding:40px 28px;text-align:center}
+.reg .done h2{margin-bottom:8px}
+@media (max-width:520px){.reg .row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<section class="banner"><div class="bwrap">
+  <img class="logo" src="logo.png" alt="EU AI Safety Forum">
+  <div class="when">Wednesday 4 November 2026 &middot; Quartier Papier, Brussels</div>
+  <p class="lede">A one-day forum for policymakers and AI governance researchers, with talks, workshops, networking and dinner.</p>
+  <a class="btn" href="#register" data-open-register>Register</a><small>Invite only &middot; registration requires approval</small>
+</div></section>
+<div class="sheet"><div class="inner">
+
+  <h2 id="programme">Program</h2>
+  <div class="prog">
+    <div class="head"><span>Wed 4 Nov</span><span style="text-align:center">Main stage</span></div>
+    <div class="slot minor"><div class="t">13:30 - 14:25</div><div class="c">Venue &amp; registration opens</div></div>
+    <div class="slot minor"><div class="t">14:25 - 14:30</div><div class="c">Introduction</div></div>
+    <div class="slot"><div class="t">14:30 - 15:10</div><div class="c"><b>The AI Governance Landscape</b><span class="who">Charles Martinet</span></div></div>
+    <div class="slot minor"><div class="t">15:10 - 15:30</div><div class="c">Break</div></div>
+    <div class="slot"><div class="t">15:30 - 17:00</div><div class="c"><b>Workshop: Core Concepts in AI Safety</b><span class="who">Duncan Eddy</span></div></div>
+    <div class="slot minor"><div class="t">17:00 - 17:30</div><div class="c">Break</div></div>
+    <div class="slot"><div class="t">17:30 - 18:10</div><div class="c"><b>Compute Governance &amp; Verification Infrastructure</b><span class="who">Nicoleta Kyosovska</span></div></div>
+    <div class="slot minor"><div class="t">18:10 - 18:30</div><div class="c">Break</div></div>
+    <div class="slot"><div class="t">18:30 - 19:25</div><div class="c"><b>Panel: Where Next for EU AI Governance?</b><span class="who">Nate Burnikell, Sergey Lagodinsky, Daan Juijn</span></div></div>
+    <div class="slot minor"><div class="t">19:25 - 19:30</div><div class="c">Closing remarks</div></div>
+    <div class="slot"><div class="t">19:30 - 21:30</div><div class="c"><b>Dinner</b></div></div>
+  </div>
+
+  <h2 id="people">Guest List</h2>
+  <div class="label">Speakers</div>
+  <ul class="people">
+    <li><b>Charles Martinet</b><span>Oxford Martin AI Governance Initiative</span></li>
+    <li><b>Duncan Eddy</b><span>Stanford University</span></li>
+    <li><b>Nicoleta Kyosovska</b><span>Centre for European Policy Studies (CEPS)</span></li>
+    <li><b>Nate Burnikell</b><span>Chief Strategy Officer, UK AI Security Institute</span></li>
+    <li><b>Sergey Lagodinsky</b><span>MEP, Greens/EFA</span></li>
+    <li><b>Daan Juijn</b><span>Director of Research, Arq Foundation</span></li>
+  </ul>
+  <div class="label">Guests</div>
+  <ul class="people">
+    <li><b>Virginie Joron</b><span>Member of the European Parliament</span></li>
+    <li><b>Leonardo Cervera-Navas</b><span>Secretary General, European Data Protection Supervisor</span></li>
+    <li><b>Benjamin Bögel</b><span>Cabinet of the Commission EVP for Tech Sovereignty, Security and Democracy</span></li>
+    <li><b>Anja Wyrobek</b><span>Lead Digital Advisor to MEP Birgit Sippel</span></li>
+    <li><b>Ralf Bendrath</b><span>Adviser, LIBE, Greens/EFA, European Parliament</span></li>
+    <li><b>Ruxandra Deaconu</b><span>Council of Europe Liaison Office to the EU</span></li>
+    <li><b>Charbel Segerie</b><span>Executive Director, CeSIA</span></li>
+    <li><b>Bengüsu Özcan</b><span>Arq Foundation</span></li>
+    <li><b>Naci Cankaya</b><span>Technical Governance Researcher, MIRI</span></li>
+    <li><b>Eliška Andrš</b><span>Policy Researcher, Future of Life Institute</span></li>
+    <li><b>Thomas Lilamand</b><span>Senior Research Scholar, Institute for Law &amp; AI</span></li>
+    <li><b>Samuel Goodger</b><span>Policy Analyst, European Policy Centre</span></li>
+    <li><b>Arslan Jurion</b><span>French Center for AI Safety</span></li>
+    <li><b>Jonathan Schmidt</b><span>The Future Society</span></li>
+    <li><b>Calvin Duff</b><span>Pour Demain Europe</span></li>
+    <li><b>Jimmy Farrell</b><span>Astralis Foundation</span></li>
+    <li><b>Raymond Koopmanschap</b><span>Existential Risk Observatory</span></li>
+  </ul>
+
+  <h2 id="venue">Venue &amp; Arrival</h2>
+  <div class="photos">
+    <img src="https://images.squarespace-cdn.com/content/v1/5a7c4b7fa9db098b35e485f4/1780038620748-LTPR9VISKUXF25PSU9T0/_DSC2186.jpg?format=750w" alt="Talk room set up with rows of chairs">
+    <img src="https://images.squarespace-cdn.com/content/v1/5a7c4b7fa9db098b35e485f4/1527170042154-4EIG8XJLFSBC2CZYGA1P/Quartier+Papier+-+Majestic?format=750w" alt="Dinner tables in the main hall">
+    <img src="https://images.squarespace-cdn.com/content/v1/5a7c4b7fa9db098b35e485f4/1527145152928-12VAKPXIE3VPWC8C99K5/Quartier+Papier+-+Satin?format=750w" alt="Lounge area">
+  </div>
+  <p><b>Quartier Papier</b>, Fabriekstraat 55-59, 1930 Zaventem (Brussels). Registration opens at 13:30. You'll get a name badge at the desk, and volunteers will be around to help.</p>
+  <ul class="plain">
+    <li>10-minute walk from Zaventem station, 15 minutes by direct train from Brussels-Schuman, Central and Midi</li>
+    <li>5 minutes by taxi from Brussels Airport</li>
+    <li>Free parking with EV charging. If driving, use Waze: local traffic filters confuse standard GPS</li>
+  </ul>
+
+  <h3>Where to stay</h3>
+  <ul class="plain">
+    <li>Mövenpick Brussels Airport, ~1 km from the venue (€190-220)</li>
+    <li>Crowne Plaza Brussels Airport, 1-2 km (€170-200)</li>
+    <li>Novotel Brussels Airport, 1-2 km (~€102)</li>
+    <li>Thon Hotel EU, city centre next to Schuman station, 15 min by train (€160-195)</li>
+  </ul>
+  <p>A full attendee guide will follow by email closer to the day.</p>
+
+  <h3>Privacy</h3>
+  <p>There is no media at the event, so that policy ideas can be discussed openly. Please don't take pictures or videos or make recordings.</p>
+
+  <h3>Questions?</h3>
+  <p>Email us at <a href="mailto:mail@aisafetyaachen.org">mail@aisafetyaachen.org</a>.</p>
+
+  <footer>Organised by AI Safety Aachen e.V. together with the Stanford Center for AI Safety</footer>
+
+</div></div>
+
+<dialog class="reg" id="register">
+  <form id="regForm">
+    <h2>Register</h2>
+    <div class="sub">4 November 2026, Quartier Papier, Brussels</div>
+    <div class="row">
+      <div><label for="r-name">Full name</label><input type="text" id="r-name" name="name" required autocomplete="name"></div>
+      <div><label for="r-email">Email</label><input type="email" id="r-email" name="email" required autocomplete="email"></div>
+    </div>
+    <label for="r-org">Organisation and role</label><input type="text" id="r-org" name="organisation" required>
+    <label>Do you need us to cover travel costs?</label>
+    <div class="choice">
+      <label><input type="radio" name="travel" value="no" checked> No</label>
+      <label><input type="radio" name="travel" value="yes"> Yes</label>
+    </div>
+    <div class="travel" id="travelBox">
+      <div class="row">
+        <div><label for="r-from">Travelling from</label><input type="text" id="r-from" name="travel_from"></div>
+        <div><label for="r-cost">Estimated cost <span>(EUR)</span></label><input type="number" id="r-cost" name="travel_cost" min="0" step="10"></div>
+      </div>
+    </div>
+    <label for="r-diet">Dietary requirements or allergies <span>(optional)</span></label><input type="text" id="r-diet" name="dietary">
+    <label for="r-notes">Anything else? <span>(optional)</span></label><textarea id="r-notes" name="notes"></textarea>
+    <div class="actions"><button type="button" class="close" data-close>Cancel</button><button type="submit" class="btn">Send registration</button></div>
+  </form>
+  <div class="done" id="regDone" hidden>
+    <h2>Thank you</h2>
+    <p>We've received your registration and will confirm your place by email.</p>
+    <button type="button" class="btn" data-close>Close</button>
+  </div>
+</dialog>
+<script>
+// Where registrations are sent. TODO: set once the backend is decided.
+const REGISTER_ENDPOINT = '';
+const dlg = document.getElementById('register');
+document.querySelectorAll('[data-open-register]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); dlg.showModal(); }));
+dlg.querySelectorAll('[data-close]').forEach(b => b.addEventListener('click', () => dlg.close()));
+dlg.addEventListener('click', e => { const r = dlg.getBoundingClientRect(); if (e.target === dlg && (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom)) dlg.close(); });
+document.querySelectorAll('input[name=travel]').forEach(r => r.addEventListener('change', () =>
+  document.getElementById('travelBox').classList.toggle('on', document.querySelector('input[name=travel]:checked').value === 'yes')));
+document.getElementById('regForm').addEventListener('submit', async e => {
+  e.preventDefault();
+  const data = Object.fromEntries(new FormData(e.target));
+  if (REGISTER_ENDPOINT) {
+    await fetch(REGISTER_ENDPOINT, { method: 'POST', body: JSON.stringify(data) });
+  } else {
+    console.log('registration (no endpoint yet)', data);
+  }
+  e.target.hidden = true;
+  document.getElementById('regDone').hidden = false;
+});
+if (location.hash === '#register') dlg.showModal();
+</script>
+</body>
+</html>
