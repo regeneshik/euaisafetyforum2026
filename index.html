@@ -250,6 +250,7 @@ dialog.reg::backdrop{background:rgba(10,30,60,.45)}
     </div>
     <label for="r-diet">Dietary requirements or allergies <span>(optional)</span></label><input type="text" id="r-diet" name="dietary">
     <label for="r-notes">Anything else? <span>(optional)</span></label><textarea id="r-notes" name="notes"></textarea>
+<input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;height:0;width:0;opacity:0">
     <div class="actions"><button type="button" class="close" data-close>Cancel</button><button type="submit" class="btn">Send registration</button></div>
   </form>
   <div class="done" id="regDone" hidden>
@@ -259,8 +260,8 @@ dialog.reg::backdrop{background:rgba(10,30,60,.45)}
   </div>
 </dialog>
 <script>
-// Where registrations are sent. TODO: set once the backend is decided.
-const REGISTER_ENDPOINT = '';
+// Registrations go to the Apps Script web app on the 'EU AISF 2026 Registrations' sheet (AISA account)
+const REGISTER_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzjr1yNktH1Mx1uScS71Bp8CkPiaBRKbUvtvpbSZLzFLgkgJwdXb6_dO9uP4pSBTWrTng/exec';
 const dlg = document.getElementById('register');
 document.querySelectorAll('[data-open-register]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); dlg.showModal(); }));
 dlg.querySelectorAll('[data-close]').forEach(b => b.addEventListener('click', () => dlg.close()));
@@ -271,7 +272,17 @@ document.getElementById('regForm').addEventListener('submit', async e => {
   e.preventDefault();
   const data = Object.fromEntries(new FormData(e.target));
   if (REGISTER_ENDPOINT) {
-    await fetch(REGISTER_ENDPOINT, { method: 'POST', body: JSON.stringify(data) });
+    const btn = e.target.querySelector('button[type=submit]');
+    btn.disabled = true; btn.textContent = 'Sending...';
+    try {
+      // text/plain + no-cors keeps this a simple request that Apps Script accepts
+      await fetch(REGISTER_ENDPOINT, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(data) });
+      document.querySelector('#regDone p').textContent = "We've received your registration. You'll get a confirmation email with a calendar invite shortly, and we'll confirm your place.";
+    } catch (err) {
+      btn.disabled = false; btn.textContent = 'Send registration';
+      alert('Sorry, that did not go through. Please try again or email mail@aisafetyaachen.org.');
+      return;
+    }
   } else {
     // No backend yet: hand the registration over as a prefilled email
     const lines = [
