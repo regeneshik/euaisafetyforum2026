@@ -36,7 +36,7 @@ h3 { color: var(--navy); font-size: 1.02rem; margin: 22px 0 6px; }
 p { margin: 0 0 12px; }
 header { text-align: center; }
 .logo { display: block; width: min(260px, 70%); height: auto; margin: 0 auto; }
-.lead { max-width: 560px; margin: 14px auto 0; color: var(--ink-2); font-size: 1.02rem; }
+.lead { text-wrap: balance; max-width: 560px; margin: 14px auto 0; color: var(--ink-2); font-size: 1.02rem; }
 @media (max-width: 480px) { .toc { columns: 1; } }
 
 
@@ -47,16 +47,15 @@ header { text-align: center; }
 
 /* program */
 .prog { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--card); font-size: .95rem; line-height: 1.4; }
-.slot { display: grid; grid-template-columns: 124px 1fr 150px; border-top: 1px solid var(--line); }
+.slot { display: grid; grid-template-columns: 124px 1fr; border-top: 1px solid var(--line); }
 .slot:first-child { border-top: 0; }
 .slot > div { padding: 10px 14px; }
 .slot .t { background: var(--soft); color: var(--navy); font-size: .86rem; font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
-.slot .r { color: var(--ink-2); font-size: .86rem; }
 .slot b { font-weight: 600; }
 .slot .who { display: block; color: var(--ink-2); font-size: .86rem; font-style: italic; }
 .slot.minor > div { padding-top: 6px; padding-bottom: 6px; }
 .slot.minor .c { color: var(--ink-2); font-size: .88rem; }
-@media (max-width: 600px) { .slot { grid-template-columns: 96px 1fr; } .slot .r { grid-column: 2; padding-top: 0; } }
+@media (max-width: 600px) { .slot { grid-template-columns: 96px 1fr; } }
 
 ul.plain { padding-left: 20px; margin: 0 0 12px; }
 ul.plain li { margin-bottom: 4px; }
@@ -76,7 +75,7 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
 <header>
   <a href="/"><img class="logo" src="/logo.png" alt="EU AI Safety Forum"></a>
   <h1>Attendee Guide</h1>
-  <p class="lead">Wednesday 4 November, Quartier Papier in Zaventem near Brussels. Doors open at 13:30, the program starts at 14:25 and dinner runs until 21:30.</p>
+  <p class="lead">Wednesday 4 November, Quartier Papier in Zaventem near Brussels. Doors open at 13:30, the program starts at 14:25 and dinner runs until&nbsp;21:30.</p>
 </header>
 
 <ol class="toc">
@@ -107,26 +106,27 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
 </div>
 
 <h2 id="program">Program</h2>
+<p>Everything after registration is in Satin on the 3rd floor.</p>
 <div class="prog">
-  <div class="slot minor"><div class="t">13:30 - 14:25</div><div class="c">Registration &amp; welcome coffee</div><div class="r">Ground floor</div></div>
-  <div class="slot minor"><div class="t">14:25 - 14:30</div><div class="c">Introduction</div><div class="r">Satin, 3rd floor</div></div>
-  <div class="slot"><div class="t">14:30 - 15:10</div><div class="c"><b>Overview of the AI Governance landscape</b><span class="who">Charles Martinet</span></div><div class="r">Satin, 3rd floor</div></div>
-  <div class="slot minor"><div class="t">15:10 - 15:30</div><div class="c">Break &amp; networking</div><div class="r"></div></div>
-  <div class="slot"><div class="t">15:30 - 17:00</div><div class="c"><b>Core Concepts in AI Safety Workshop</b><span class="who">Duncan Eddy</span></div><div class="r">Satin, 3rd floor</div></div>
-  <div class="slot minor"><div class="t">17:00 - 17:30</div><div class="c">Break &amp; networking</div><div class="r"></div></div>
-  <div class="slot"><div class="t">17:30 - 18:10</div><div class="c"><b>Compute Governance &amp; Verification Infrastructure</b><span class="who">Nicoleta Kyosovska</span></div><div class="r">Satin, 3rd floor</div></div>
-  <div class="slot minor"><div class="t">18:10 - 18:30</div><div class="c">Break &amp; networking</div><div class="r"></div></div>
-  <div class="slot"><div class="t">18:30 - 19:25</div><div class="c"><b>Panel Discussion on EU AI Governance</b><span class="who">Friederike Grosse-Holz, Sergey Lagodinsky, Daan Juijn</span></div><div class="r">Satin, 3rd floor</div></div>
-  <div class="slot minor"><div class="t">19:25 - 19:30</div><div class="c">Closing remarks</div><div class="r">Satin, 3rd floor</div></div>
-  <div class="slot"><div class="t">19:30 - 21:30</div><div class="c"><b>Dinner</b></div><div class="r">Satin, 3rd floor</div></div>
-  <div class="slot minor"><div class="t">21:30 - 22:00</div><div class="c">Venue closing</div><div class="r"></div></div>
+  <div class="slot minor"><div class="t">13:30 - 14:25</div><div class="c">Registration &amp; welcome coffee, ground floor</div></div>
+  <div class="slot minor"><div class="t">14:25 - 14:30</div><div class="c">Introduction</div></div>
+  <div class="slot"><div class="t">14:30 - 15:10</div><div class="c"><b>Overview of the AI Governance landscape</b><span class="who">Charles Martinet</span></div></div>
+  <div class="slot minor"><div class="t">15:10 - 15:30</div><div class="c">Break &amp; networking</div></div>
+  <div class="slot"><div class="t">15:30 - 17:00</div><div class="c"><b>Core Concepts in AI Safety Workshop</b><span class="who">Duncan Eddy</span></div></div>
+  <div class="slot minor"><div class="t">17:00 - 17:30</div><div class="c">Break &amp; networking</div></div>
+  <div class="slot"><div class="t">17:30 - 18:10</div><div class="c"><b>Compute Governance &amp; Verification Infrastructure</b><span class="who">Nicoleta Kyosovska</span></div></div>
+  <div class="slot minor"><div class="t">18:10 - 18:30</div><div class="c">Break &amp; networking</div></div>
+  <div class="slot"><div class="t">18:30 - 19:25</div><div class="c"><b>Panel Discussion on EU AI Governance</b><span class="who">Friederike Grosse-Holz, Sergey Lagodinsky, Daan Juijn</span></div></div>
+  <div class="slot minor"><div class="t">19:25 - 19:30</div><div class="c">Closing remarks</div></div>
+  <div class="slot"><div class="t">19:30 - 21:30</div><div class="c"><b>Dinner</b></div></div>
+  <div class="slot minor"><div class="t">21:30 - 22:00</div><div class="c">Venue closing</div></div>
 </div>
 <p style="margin-top:12px">For the workshop, there's no need to bring a laptop. The full guest list is on the <a href="/#people">event page</a>.</p>
 
 <h2 id="food">Food &amp; drinks</h2>
 <p>Coffee, tea and snacks are available from 13:30 and during the breaks. Dinner is a buffet from 19:30, catered by Artfood.</p>
 <p>Menu: <span class="tbd">to add</span></p>
-<p>We've passed on the dietary needs from your registration to the caterer. If anything has changed, email us by <span class="tbd">date TBD</span>.</p>
+<p>We've passed on the dietary needs from your registration to the caterer. If anything changes, just email us at <a href="mailto:mail@aisafetyaachen.org">mail@aisafetyaachen.org</a> and we'll do our best.</p>
 
 <h2 id="practical">Practical</h2>
 <h3>Wi-Fi</h3>
@@ -143,7 +143,7 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
 <h2 id="home">Getting home &amp; after the event</h2>
 <ul class="plain">
   <li>Trains from Zaventem back to Brussels run into the late evening; check the SNCB app for times. Volunteers are happy to help you call a taxi.</li>
-  <li>If we agreed to cover your travel, send your receipts and bank details to <a href="mailto:mail@aisafetyaachen.org">mail@aisafetyaachen.org</a> by <span class="tbd">date TBD</span>.</li>
+  <li>If we agreed to cover your travel, send your receipts and bank details to <a href="mailto:mail@aisafetyaachen.org">mail@aisafetyaachen.org</a> after the event.</li>
   <li>We'll send a short feedback form after the Forum. It helps us a lot.</li>
 </ul>
 
