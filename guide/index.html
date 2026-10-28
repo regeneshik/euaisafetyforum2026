@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Attendee Guide · EU AI Safety Forum 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root {
+  --page: #ffffff; --sheet: #ffffff; --card: #ffffff;
+  --navy: #13396b; --blue: #1f6fae;
+  --ink: #1c2430; --ink-2: #556273; --ink-3: #8592a3;
+  --soft: #e6eff8; --line: #dde5ee; --tbd: #fff4d6; --tbd-ink: #7a5a00;
+  --font: 'Inter', system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --page: #0f1824; --sheet: #0f1824; --card: #1a283b; --navy: #a9c8f3; --blue: #8db6ee;
+    --ink: #e6ecf3; --ink-2: #a9b4c2; --ink-3: #7c8899; --soft: #1d2f47; --line: #2a3a50; --tbd: #3a3218; --tbd-ink: #f0d58a;
+  }
+}
+:root[data-theme="dark"] {
+  --page: #0f1824; --sheet: #0f1824; --card: #1a283b; --navy: #a9c8f3; --blue: #8db6ee;
+  --ink: #e6ecf3; --ink-2: #a9b4c2; --ink-3: #7c8899; --soft: #1d2f47; --line: #2a3a50; --tbd: #3a3218; --tbd-ink: #f0d58a;
+}
+* { box-sizing: border-box; }
+html { -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+body { margin: 0; background: var(--page); color: var(--ink); font: 400 16px/1.6 var(--font); }
+.sheet { width: min(860px, 100%); margin: 0 auto; background: var(--sheet); padding: 48px 16px 40px; }
+.inner { max-width: 720px; margin: 0 auto; }
+a { color: var(--blue); }
+h1 { color: var(--navy); font-size: 2rem; letter-spacing: -.02em; margin: 18px 0 4px; text-align: center; }
+h2 { color: var(--navy); font-weight: 700; letter-spacing: -.02em; font-size: 1.45rem; margin: 48px 0 12px; }
+h3 { color: var(--navy); font-size: 1.02rem; margin: 22px 0 6px; }
+p { margin: 0 0 12px; }
+header { text-align: center; }
+.logo { display: block; width: min(300px, 80%); height: auto; margin: 0 auto; }
+.when { color: var(--ink-2); margin-top: 6px; }
+
+/* at a glance */
+.glance { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-top: 32px; }
+.glance div { background: var(--card); padding: 14px 18px; }
+.glance b { display: block; font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 2px; }
+@media (max-width: 560px) { .glance { grid-template-columns: 1fr; } }
+
+/* contents */
+.toc { margin: 28px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.toc a { display: inline-block; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; text-decoration: none; font-size: .88rem; color: var(--navy); }
+.toc a:hover { background: var(--soft); }
+
+/* program */
+.prog { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--card); font-size: .95rem; line-height: 1.4; }
+.slot { display: grid; grid-template-columns: 124px 1fr 150px; border-top: 1px solid var(--line); }
+.slot:first-child { border-top: 0; }
+.slot > div { padding: 10px 14px; }
+.slot .t { background: var(--soft); color: var(--navy); font-size: .86rem; font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.slot .r { color: var(--ink-2); font-size: .86rem; }
+.slot b { font-weight: 600; }
+.slot .who { display: block; color: var(--ink-2); font-size: .86rem; font-style: italic; }
+.slot.minor > div { padding-top: 6px; padding-bottom: 6px; }
+.slot.minor .c { color: var(--ink-2); font-size: .88rem; }
+@media (max-width: 600px) { .slot { grid-template-columns: 96px 1fr; } .slot .r { grid-column: 2; padding-top: 0; } }
+
+ul.plain { padding-left: 20px; margin: 0 0 12px; }
+ul.plain li { margin-bottom: 4px; }
+.note { background: var(--soft); border-radius: 10px; padding: 14px 18px; margin: 12px 0; }
+.tbd { background: var(--tbd); color: var(--tbd-ink); border-radius: 4px; padding: 1px 6px; font-size: .9em; }
+.plan { border: 1px dashed var(--line); border-radius: 12px; padding: 28px; text-align: center; color: var(--ink-3); }
+footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--ink-3); font-size: .85rem; text-align: center; }
+</style>
+</head>
+<body>
+<div class="sheet"><div class="inner">
+
+<header>
+  <a href="/"><img class="logo" src="/logo.png" alt="EU AI Safety Forum"></a>
+  <h1>Attendee Guide</h1>
+  <div class="when">Wednesday 4 November 2026 &middot; Quartier Papier, Brussels</div>
+</header>
+
+<div class="glance">
+  <div><b>Doors open</b>13:30, program starts 14:25</div>
+  <div><b>Ends</b>Dinner until 21:30, venue closes 22:00</div>
+  <div><b>Address</b>Quartier Papier, Fabriekstraat 55-59, 1930 Zaventem</div>
+  <div><b>On the day</b>Call or text <span class="tbd">phone number TBD</span></div>
+</div>
+
+<ul class="toc">
+  <li><a href="#arrival">Getting there</a></li>
+  <li><a href="#registration">Arrival</a></li>
+  <li><a href="#program">Program</a></li>
+  <li><a href="#food">Food &amp; drinks</a></li>
+  <li><a href="#practical">Practical</a></li>
+  <li><a href="#help">Getting help</a></li>
+  <li><a href="#home">Getting home</a></li>
+</ul>
+
+<h2 id="arrival">Getting there</h2>
+<ul class="plain">
+  <li><b>By train:</b> direct trains from Brussels-Schuman, Central and Midi to Zaventem take about 15 minutes. The venue is a 10-minute walk from Zaventem station.</li>
+  <li><b>From the airport:</b> 5 minutes by taxi from Brussels Airport.</li>
+  <li><b>By car:</b> free parking with EV charging at the venue. Use Waze: local traffic filters confuse standard GPS.</li>
+</ul>
+<p>Running late? Just come in and find a volunteer, or let us know at the number above.</p>
+
+<h2 id="registration">Arrival &amp; registration</h2>
+<p>Enter at Fabriekstraat 55-59. The registration desk is on the ground floor, where you'll pick up your name badge. You can leave your coat and luggage at the cloakroom next to it; volunteers hand out tickets.</p>
+<p>The talks, workshop, panel and dinner are in <b>Satin, on the 3rd floor</b>. There's a lift to all floors.</p>
+<div class="plan">Floor plan <span class="tbd">to add</span></div>
+
+<h2 id="program">Program</h2>
+<div class="prog">
+  <div class="slot minor"><div class="t">13:30 - 14:25</div><div class="c">Registration &amp; welcome coffee</div><div class="r">Ground floor</div></div>
+  <div class="slot minor"><div class="t">14:25 - 14:30</div><div class="c">Introduction</div><div class="r">Satin, 3rd floor</div></div>
+  <div class="slot"><div class="t">14:30 - 15:10</div><div class="c"><b>Overview of the AI Governance landscape</b><span class="who">Charles Martinet</span></div><div class="r">Satin, 3rd floor</div></div>
+  <div class="slot minor"><div class="t">15:10 - 15:30</div><div class="c">Break &amp; networking</div><div class="r"></div></div>
+  <div class="slot"><div class="t">15:30 - 17:00</div><div class="c"><b>Core Concepts in AI Safety Workshop</b><span class="who">Duncan Eddy</span></div><div class="r">Satin, 3rd floor</div></div>
+  <div class="slot minor"><div class="t">17:00 - 17:30</div><div class="c">Break &amp; networking</div><div class="r"></div></div>
+  <div class="slot"><div class="t">17:30 - 18:10</div><div class="c"><b>Compute Governance &amp; Verification Infrastructure</b><span class="who">Nicoleta Kyosovska</span></div><div class="r">Satin, 3rd floor</div></div>
+  <div class="slot minor"><div class="t">18:10 - 18:30</div><div class="c">Break &amp; networking</div><div class="r"></div></div>
+  <div class="slot"><div class="t">18:30 - 19:25</div><div class="c"><b>Panel Discussion on EU AI Governance</b><span class="who">Friederike Grosse-Holz, Sergey Lagodinsky, Daan Juijn</span></div><div class="r">Satin, 3rd floor</div></div>
+  <div class="slot minor"><div class="t">19:25 - 19:30</div><div class="c">Closing remarks</div><div class="r">Satin, 3rd floor</div></div>
+  <div class="slot"><div class="t">19:30 - 21:30</div><div class="c"><b>Dinner</b></div><div class="r">Satin, 3rd floor</div></div>
+  <div class="slot minor"><div class="t">21:30 - 22:00</div><div class="c">Venue closing</div><div class="r"></div></div>
+</div>
+<p style="margin-top:12px">For the workshop, there's no need to bring a laptop. The full guest list is on the <a href="/#people">event page</a>.</p>
+
+<h2 id="food">Food &amp; drinks</h2>
+<p>Coffee, tea and snacks are available from 13:30 and during the breaks. Dinner is a buffet from 19:30, catered by Artfood.</p>
+<p>Menu: <span class="tbd">to add</span></p>
+<p>We've passed on the dietary needs from your registration to the caterer. If anything has changed, email us by <span class="tbd">date TBD</span>.</p>
+
+<h2 id="practical">Practical</h2>
+<h3>Wi-Fi</h3>
+<p>Network <span class="tbd">TBD</span> &middot; Password <span class="tbd">TBD</span></p>
+<h3>Photos &amp; recordings</h3>
+<p>We won't take photos or recordings at the Forum, and we'd ask you not to either.</p>
+<h3>Accessibility</h3>
+<p>All floors are reachable by lift. If you have any accessibility needs, let us know in advance and we'll make sure they're covered.</p>
+
+<h2 id="help">Getting help</h2>
+<p>Volunteers in team T-shirts are around all day, and the registration desk on the ground floor is staffed throughout. For anything urgent on the day, call or text <span class="tbd">phone number TBD</span>. If you need a quiet spot for a call, ask a volunteer.</p>
+<p>Before the event, email <a href="mailto:mail@aisafetyaachen.org">mail@aisafetyaachen.org</a>.</p>
+
+<h2 id="home">Getting home &amp; after the event</h2>
+<ul class="plain">
+  <li>Trains from Zaventem back to Brussels run into the late evening; check the SNCB app for times. Volunteers are happy to help you call a taxi.</li>
+  <li>If we agreed to cover your travel, send your receipts and bank details to <a href="mailto:mail@aisafetyaachen.org">mail@aisafetyaachen.org</a> by <span class="tbd">date TBD</span>.</li>
+  <li>We'll send a short feedback form after the Forum. It helps us a lot.</li>
+</ul>
+
+<h3>Privacy</h3>
+<p>We use your registration details only to organise the Forum: the guest list on the event page, badges, catering and travel reimbursement. Ask us at <a href="mailto:mail@aisafetyaachen.org">mail@aisafetyaachen.org</a> if you'd like anything changed or removed.</p>
+
+<footer>Organised by AI Safety Aachen e.V. together with the Stanford Center for AI Safety</footer>
+
+</div></div>
+</body>
+</html>
