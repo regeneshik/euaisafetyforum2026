@@ -46,16 +46,21 @@ header { text-align: center; }
 .toc a:hover { text-decoration: underline; }
 
 /* program */
-.prog { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--card); font-size: .95rem; line-height: 1.4; }
-.slot { display: grid; grid-template-columns: 124px 1fr; border-top: 1px solid var(--line); }
-.slot:first-child { border-top: 0; }
-.slot > div { padding: 10px 14px; }
-.slot .t { background: var(--soft); color: var(--navy); font-size: .86rem; font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
-.slot b { font-weight: 600; }
-.slot .who { display: block; color: var(--ink-2); font-size: .86rem; font-style: italic; }
-.slot.minor > div { padding-top: 6px; padding-bottom: 6px; }
-.slot.minor .c { color: var(--ink-2); font-size: .88rem; }
-@media (max-width: 600px) { .slot { grid-template-columns: 96px 1fr; } }
+.prog { border: 1px solid #c9d7e6; border-radius: 12px; overflow: hidden; background: var(--card); font-size: 0.95rem; line-height: 1.4; }
+.prog .head span { padding: 0 16px; }
+.prog .head { background: var(--navy); color: #fff; font-weight: 600; padding: 10px 0; display: grid; grid-template-columns: 136px 1fr; }
+.slot { display: grid; grid-template-columns: 136px 1fr; border-top: 1px solid #dbe5f0; }
+.slot .t { background: #eef4fa; color: var(--navy); font-size: 0.86rem; font-weight: 500; font-variant-numeric: tabular-nums; padding: 11px 16px; display: flex; align-items: center; white-space: nowrap; }
+.slot .c { padding: 11px 16px; text-align: center; }
+.slot b { display: block; font-weight: 600; color: var(--ink); }
+.slot .who { display: block; color: var(--ink-2); font-size: 0.88rem; font-style: italic; }
+.slot.minor .c { color: var(--ink-3); font-size: 0.86rem; padding-top: 6px; padding-bottom: 6px; background: #f7fafd; }
+.slot.minor .t { padding-top: 6px; padding-bottom: 6px; color: var(--ink-2); font-weight: 400; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .prog { border-color: var(--line); }
+  :root:not([data-theme="light"]) .slot { border-color: var(--line); }
+  :root:not([data-theme="light"]) .slot .t { background: var(--soft); }
+  :root:not([data-theme="light"]) .slot.minor .c { background: transparent; } }
+@media (max-width: 520px) { .prog .head, .slot { grid-template-columns: 112px 1fr; } .slot .t, .slot .c, .prog .head { padding-left: 10px; padding-right: 10px; } }
 
 ul.plain { padding-left: 20px; margin: 0 0 12px; }
 ul.plain li { margin-bottom: 4px; }
@@ -65,6 +70,14 @@ ul.plain li { margin-bottom: 4px; }
 .plans figure:last-child img { max-width: 70%; margin: 0 auto; }
 .plans figure { margin: 0; }
 .plans img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 10px; padding: 12px; background: #fff; }
+.fp { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 10px; padding: 14px; background: var(--card); }
+.fp polyline, .fp polygon.wall { fill: none; stroke: var(--blue); stroke-width: 6; stroke-linecap: square; stroke-linejoin: miter; }
+.fp .hl { fill: var(--soft); stroke: none; }
+.fp .stg { fill: var(--blue); }
+.fp text { fill: var(--ink-3); font: 500 22px var(--font); text-anchor: middle; }
+.fp text.big { fill: var(--navy); font-weight: 600; font-size: 26px; }
+.fp text.stgt { fill: var(--card); font-size: 20px; font-weight: 600; }
+.plans figure:last-child .fp { max-width: 70%; margin: 0 auto; }
 .plans figcaption { color: var(--ink-2); font-size: .85rem; margin-top: 6px; text-align: center; }
 @media (max-width: 600px) { .plans { grid-template-columns: 1fr; } }
 .label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); margin: 28px 0 4px; }
@@ -110,25 +123,26 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
 <p>Enter at Fabriekstraat 55-59. The registration desk is on the ground floor, where you'll pick up your name badge. You can leave your coat and luggage at the cloakroom next to it; volunteers hand out tickets.</p>
 <p>The talks, workshop, panel and dinner are in <b>Satin, on the 3rd floor</b>. There's a lift to all floors.</p>
 <div class="plans">
-  <figure><img src="floor-0.png" alt="Ground floor plan" loading="lazy"><figcaption>Ground floor: entrance, registration, cloakroom, welcome coffee in Soie</figcaption></figure>
-  <figure><img src="floor-3.png" alt="3rd floor plan" loading="lazy"><figcaption>3rd floor: Satin (talks, workshop, panel, dinner)</figcaption></figure>
+  <figure><svg class="fp" viewBox="20 214 1185 850" role="img" aria-label="Ground floor plan"><polygon class="hl" points="38,372 605,372 605,788 290,788 290,640 38,640"/><polygon class="hl" points="605,580 730,580 730,715 605,715"/><polygon class="hl" points="400,788 585,788 585,1045 400,1045"/><polygon class="hl" points="230,788 400,788 400,830 230,830"/><polygon class="wall" points="38,232 605,232 605,402 1185,402 1185,655 865,655 865,768 800,768 800,935 585,935 585,1045 400,1045 400,940 38,940"/><polyline points="38,372 275,372"/><polyline points="370,372 605,372"/><polyline points="272,232 272,330"/><polyline points="372,232 372,330"/><polyline points="38,640 290,640 290,788"/><polyline points="38,788 160,788"/><polyline points="210,788 400,788"/><polyline points="150,830 400,830"/><polyline points="150,830 150,940"/><polyline points="230,788 230,830"/><polyline points="400,788 400,940"/><polyline points="585,768 655,768"/><polyline points="715,768 800,768"/><polyline points="585,768 585,935"/><polyline points="605,402 605,715 620,715"/><polyline points="655,715 730,715"/><polyline points="605,580 730,580"/><polyline points="730,402 730,715"/><polyline points="800,402 800,620"/><polyline points="800,690 800,768"/><polyline points="800,535 1185,535"/><text class="big" x="320" y="510"><tspan x="320" dy="0">Soie</tspan><tspan x="320" dy="30">welcome coffee</tspan></text><text class="" x="164" y="722"><tspan x="164" dy="0">Kitchen</tspan></text><text class="" x="155" y="310"><tspan x="155" dy="0">Office</tspan></text><text class="" x="488" y="310"><tspan x="488" dy="0">Boardroom</tspan></text><text class="" x="667" y="500"><tspan x="667" dy="0">Tech</tspan></text><text class="big" x="667" y="640"><tspan x="667" dy="0">Cloak-</tspan><tspan x="667" dy="30">room</tspan></text><text class="big" x="492" y="905"><tspan x="492" dy="0">Entrance</tspan><tspan x="492" dy="30">registration</tspan></text><text class="big" x="315" y="818"><tspan x="315" dy="0">Lift</tspan></text><text class="" x="692" y="860"><tspan x="692" dy="0">Restrooms</tspan></text><text class="" x="94" y="880"><tspan x="94" dy="0">Stairs</tspan></text><text class="" x="275" y="895"><tspan x="275" dy="0">Tech</tspan></text><text class="" x="992" y="605"><tspan x="992" dy="0">Meeting rooms</tspan></text></svg><figcaption>Ground floor: entrance, registration, cloakroom, welcome coffee in Soie</figcaption></figure>
+  <figure><svg class="fp" viewBox="4 190 624 773" role="img" aria-label="3rd floor plan"><polygon class="hl" points="22,208 610,208 610,685 22,685"/><polygon class="stg" points="525,400 595,400 595,528 525,528"/><polygon class="hl" points="290,785 395,785 395,850 290,850"/><polygon class="wall" points="22,208 610,208 610,945 22,945"/><polyline points="22,320 175,320"/><polyline points="235,320 270,320 270,208"/><polyline points="22,685 175,685"/><polyline points="235,685 470,685"/><polyline points="530,685 610,685"/><polyline points="22,785 210,785 210,700"/><polyline points="300,700 300,785"/><polyline points="290,785 395,785 395,850 290,850 290,785"/><polyline points="395,685 395,945"/><polyline points="130,785 130,945"/><polyline points="130,850 260,850"/><text class="" x="147" y="272"><tspan x="147" dy="0">Storage</tspan></text><text class="big" x="260" y="455"><tspan x="260" dy="0">Satin</tspan><tspan x="260" dy="30">talks, panel, dinner</tspan></text><text class="stgt" x="560" y="474"><tspan x="560" dy="0">Stage</tspan></text><text class="" x="116" y="742"><tspan x="116" dy="0">Storage</tspan></text><text class="" x="505" y="820"><tspan x="505" dy="0">Kitchen</tspan></text><text class="" x="76" y="872"><tspan x="76" dy="0">Stairs</tspan></text><text class="big" x="342" y="825"><tspan x="342" dy="0">Lift</tspan></text><text class="big" x="262" y="905"><tspan x="262" dy="0">Restrooms</tspan></text></svg><figcaption>3rd floor: Satin (talks, workshop, panel, dinner)</figcaption></figure>
 </div>
 
 <h2 id="program">Program</h2>
-<p>Everything after registration is in Satin on the 3rd floor.</p>
 <div class="prog">
-  <div class="slot minor"><div class="t">13:30 - 14:25</div><div class="c">Registration &amp; welcome coffee, ground floor</div></div>
+  <div class="head"><span>Wed 4 Nov</span><span style="text-align:center">Satin, 3rd floor</span></div>
+  <div class="slot minor"><div class="t">13:30 - 14:25</div><div class="c">Registration &amp; welcome coffee (ground floor)</div></div>
   <div class="slot minor"><div class="t">14:25 - 14:30</div><div class="c">Introduction</div></div>
   <div class="slot"><div class="t">14:30 - 15:10</div><div class="c"><b>Overview of the AI Governance landscape</b><span class="who">Charles Martinet</span></div></div>
-  <div class="slot minor"><div class="t">15:10 - 15:30</div><div class="c">Break &amp; networking</div></div>
+  <div class="slot minor"><div class="t">15:10 - 15:30</div><div class="c">Break &amp; Networking</div></div>
   <div class="slot"><div class="t">15:30 - 17:00</div><div class="c"><b>Core Concepts in AI Safety Workshop</b><span class="who">Duncan Eddy</span></div></div>
-  <div class="slot minor"><div class="t">17:00 - 17:30</div><div class="c">Break &amp; networking</div></div>
+  <div class="slot minor"><div class="t">17:00 - 17:30</div><div class="c">Break &amp; Networking</div></div>
   <div class="slot"><div class="t">17:30 - 18:10</div><div class="c"><b>Compute Governance &amp; Verification Infrastructure</b><span class="who">Nicoleta Kyosovska</span></div></div>
-  <div class="slot minor"><div class="t">18:10 - 18:30</div><div class="c">Break &amp; networking</div></div>
+  <div class="slot minor"><div class="t">18:10 - 18:30</div><div class="c">Break &amp; Networking</div></div>
   <div class="slot"><div class="t">18:30 - 19:25</div><div class="c"><b>Panel Discussion on EU AI Governance</b><span class="who">Friederike Grosse-Holz, Sergey Lagodinsky, Daan Juijn</span></div></div>
   <div class="slot minor"><div class="t">19:25 - 19:30</div><div class="c">Closing remarks</div></div>
   <div class="slot"><div class="t">19:30 - 21:30</div><div class="c"><b>Dinner</b></div></div>
   <div class="slot minor"><div class="t">21:30 - 22:00</div><div class="c">Venue closing</div></div>
+</div>
 </div>
 
 <h2 id="people">Guest list</h2>
