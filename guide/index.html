@@ -66,7 +66,11 @@ ul.plain { padding-left: 20px; margin: 0 0 12px; }
 ul.plain li { margin-bottom: 4px; }
 .note { background: var(--soft); border-radius: 10px; padding: 14px 18px; margin: 12px 0; }
 .tbd { background: var(--tbd); color: var(--tbd-ink); border-radius: 4px; padding: 1px 6px; font-size: .9em; }
-.plan { border: 1px dashed var(--line); border-radius: 12px; padding: 28px; text-align: center; color: var(--ink-3); }
+.plans { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0; }
+.plans figure { margin: 0; }
+.plans img { display: block; width: 100%; height: auto; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 8px; }
+.plans figcaption { color: var(--ink-2); font-size: .85rem; margin-top: 6px; text-align: center; }
+@media (max-width: 600px) { .plans { grid-template-columns: 1fr; } }
 footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--ink-3); font-size: .85rem; text-align: center; }
 </style>
 </head>
@@ -107,7 +111,10 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
 <h2 id="registration">Arrival &amp; registration</h2>
 <p>Enter at Fabriekstraat 55-59. The registration desk is on the ground floor, where you'll pick up your name badge. You can leave your coat and luggage at the cloakroom next to it; volunteers hand out tickets.</p>
 <p>The talks, workshop, panel and dinner are in <b>Satin, on the 3rd floor</b>. There's a lift to all floors.</p>
-<div class="plan">Floor plan <span class="tbd">to add</span></div>
+<div class="plans">
+  <figure><img src="floor-0.png" alt="Ground floor plan: entrance, cloakroom, Soie, elevator" loading="lazy"><figcaption>Ground floor: entrance, registration, cloakroom, welcome coffee in Soie</figcaption></figure>
+  <figure><img src="floor-3.png" alt="3rd floor plan: Satin with stage, restrooms, elevator" loading="lazy"><figcaption>3rd floor: Satin (talks, workshop, panel, dinner)</figcaption></figure>
+</div>
 
 <h2 id="program">Program</h2>
 <div class="prog">
