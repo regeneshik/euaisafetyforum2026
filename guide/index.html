@@ -61,17 +61,19 @@ ul.plain { padding-left: 20px; margin: 0 0 12px; }
 ul.plain li { margin-bottom: 4px; }
 .note { background: var(--soft); border-radius: 10px; padding: 14px 18px; margin: 12px 0; }
 .tbd { background: var(--tbd); color: var(--tbd-ink); border-radius: 4px; padding: 1px 6px; font-size: .9em; }
-.plans { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0; align-items: end; }
+.plans { display: grid; grid-template-columns: 1fr; gap: 20px; margin: 16px 0; }
+.plans figure:last-child img { max-width: 70%; margin: 0 auto; }
 .plans figure { margin: 0; }
-.fp { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 10px; padding: 10px; background: var(--card); }
-.fp rect, .fp polygon { fill: none; stroke: var(--blue); stroke-width: 4; stroke-linejoin: round; }
-.fp .hl { fill: var(--soft); }
-.fp .stage { fill: var(--blue); }
-.fp text { fill: var(--ink-3); font: 500 22px var(--font); text-anchor: middle; }
-.fp text.big { fill: var(--navy); font-weight: 600; font-size: 26px; }
-.fp text.stg { fill: var(--sheet); font-size: 20px; font-weight: 600; writing-mode: vertical-rl; }
+.plans img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 10px; padding: 12px; background: #fff; }
 .plans figcaption { color: var(--ink-2); font-size: .85rem; margin-top: 6px; text-align: center; }
 @media (max-width: 600px) { .plans { grid-template-columns: 1fr; } }
+.label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); margin: 28px 0 4px; }
+.label:first-of-type { margin-top: 0; }
+.people { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; column-gap: 28px; }
+.people li { padding: 10px 0; border-bottom: 1px solid var(--line); }
+.people b { display: block; font-weight: 600; }
+.people span { color: var(--ink-2); font-size: 0.88rem; }
+@media (max-width: 600px) { .people { grid-template-columns: 1fr; } }
 footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--ink-3); font-size: .85rem; text-align: center; }
 </style>
 </head>
@@ -88,6 +90,7 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
   <li><a href="#arrival">Getting there</a></li>
   <li><a href="#registration">Arrival</a></li>
   <li><a href="#program">Program</a></li>
+  <li><a href="#people">Guest list</a></li>
   <li><a href="#food">Food &amp; drinks</a></li>
   <li><a href="#practical">Practical</a></li>
   <li><a href="#help">Getting help</a></li>
@@ -107,8 +110,8 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
 <p>Enter at Fabriekstraat 55-59. The registration desk is on the ground floor, where you'll pick up your name badge. You can leave your coat and luggage at the cloakroom next to it; volunteers hand out tickets.</p>
 <p>The talks, workshop, panel and dinner are in <b>Satin, on the 3rd floor</b>. There's a lift to all floors.</p>
 <div class="plans">
-  <figure><svg class="fp" viewBox="20 215 800 845" role="img" aria-label="Ground floor plan"><rect class="" x="38" y="232" width="234" height="140"/><rect class="" x="272" y="232" width="100" height="140"/><rect class="" x="372" y="232" width="233" height="140"/><rect class="hl" x="38" y="372" width="567" height="416"/><rect class="" x="38" y="640" width="252" height="148"/><rect class="" x="605" y="402" width="125" height="178"/><rect class="hl" x="605" y="580" width="125" height="136"/><rect class="" x="730" y="402" width="70" height="314"/><rect class="hl" x="400" y="788" width="185" height="257"/><rect class="" x="585" y="768" width="215" height="167"/><rect class="" x="38" y="795" width="112" height="145"/><rect class="hl" x="230" y="795" width="165" height="55"/><rect class="" x="150" y="850" width="245" height="90"/><text class="" x="155" y="310"><tspan x="155" dy="0">Office</tspan></text><text class="" x="488" y="310"><tspan x="488" dy="0">Boardroom</tspan></text><text class="big" x="320" y="546"><tspan x="320" dy="0">Soie</tspan><tspan x="320" dy="28">welcome coffee</tspan></text><text class="" x="164" y="722"><tspan x="164" dy="0">Kitchen</tspan></text><text class="" x="667" y="500"><tspan x="667" dy="0">Tech</tspan></text><text class="big" x="667" y="641"><tspan x="667" dy="0">Cloak-</tspan><tspan x="667" dy="28">room</tspan></text><text class="big" x="492" y="901"><tspan x="492" dy="0">Entrance</tspan><tspan x="492" dy="28">registration</tspan></text><text class="" x="692" y="860"><tspan x="692" dy="0">Restrooms</tspan></text><text class="" x="94" y="875"><tspan x="94" dy="0">Stairs</tspan></text><text class="big" x="312" y="830"><tspan x="312" dy="0">Lift</tspan></text><text class="" x="272" y="900"><tspan x="272" dy="0">Tech</tspan></text></svg><figcaption>Ground floor: entrance, registration, cloakroom, welcome coffee in Soie</figcaption></figure>
-  <figure><svg class="fp" viewBox="10 195 615 765" role="img" aria-label="3rd floor plan"><polygon class="hl" points="272,208 610,208 610,685 22,685 22,322 272,322"/><rect class="" x="22" y="208" width="250" height="114"/><rect class="stage" x="525" y="400" width="70" height="128"/><rect class="" x="22" y="685" width="188" height="100"/><rect class="" x="210" y="685" width="260" height="140"/><rect class="" x="470" y="685" width="140" height="260"/><rect class="" x="22" y="785" width="108" height="160"/><polygon class="hl" points="130,825 290,825 290,850 470,850 470,945 130,945"/><rect class="hl" x="290" y="785" width="105" height="65"/><text class="" x="147" y="272"><tspan x="147" dy="0">Storage</tspan></text><text class="big" x="300" y="456"><tspan x="300" dy="0">Satin</tspan><tspan x="300" dy="28">talks, panel, dinner</tspan></text><text class="stg" x="560" y="470"><tspan x="560" dy="0">Stage</tspan></text><text class="" x="116" y="742"><tspan x="116" dy="0">Storage</tspan></text><text class="" x="540" y="815"><tspan x="540" dy="0">Kitchen</tspan></text><text class="" x="76" y="872"><tspan x="76" dy="0">Stairs</tspan></text><text class="big" x="342" y="825"><tspan x="342" dy="0">Lift</tspan></text><text class="big" x="300" y="900"><tspan x="300" dy="0">Restrooms</tspan></text></svg><figcaption>3rd floor: Satin (talks, workshop, panel, dinner)</figcaption></figure>
+  <figure><img src="floor-0.png" alt="Ground floor plan" loading="lazy"><figcaption>Ground floor: entrance, registration, cloakroom, welcome coffee in Soie</figcaption></figure>
+  <figure><img src="floor-3.png" alt="3rd floor plan" loading="lazy"><figcaption>3rd floor: Satin (talks, workshop, panel, dinner)</figcaption></figure>
 </div>
 
 <h2 id="program">Program</h2>
@@ -127,7 +130,40 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
   <div class="slot"><div class="t">19:30 - 21:30</div><div class="c"><b>Dinner</b></div></div>
   <div class="slot minor"><div class="t">21:30 - 22:00</div><div class="c">Venue closing</div></div>
 </div>
-<p style="margin-top:12px">For the workshop, there's no need to bring a laptop. The full guest list is on the <a href="/#people">event page</a>.</p>
+
+<h2 id="people">Guest list</h2>
+  <div class="label">Speakers</div>
+  <ul class="people">
+    <li><b>Charles Martinet</b><span>Oxford Martin AI Governance Initiative</span></li>
+    <li><b>Duncan Eddy</b><span>Stanford University</span></li>
+    <li><b>Nicoleta Kyosovska</b><span>Centre for European Policy Studies (CEPS)</span></li>
+    <li><b>Friederike Grosse-Holz</b><span>European AI Office, European Commission</span></li>
+    <li><b>Sergey Lagodinsky</b><span>MEP, Greens/EFA</span></li>
+    <li><b>Daan Juijn</b><span>Director of Research, Arq Foundation</span></li>
+  </ul>
+  <div class="label">Guests</div>
+  <ul class="people">
+    <li><b>Virginie Joron</b><span>Member of the European Parliament</span></li>
+    <li><b>Kim van Sparrentak</b><span>Member of the European Parliament, Greens/EFA</span></li>
+    <li><b>Diego León</b><span>Legal Adviser, Office of the Secretary General, European Data Protection Supervisor</span></li>
+    <li><b>Benjamin Bögel</b><span>Cabinet of the Commission EVP for Tech Sovereignty, Security and Democracy</span></li>
+    <li><b>Anja Wyrobek</b><span>Lead Digital Advisor to MEP Birgit Sippel</span></li>
+    <li><b>Elsa Donnat</b><span>Legal Officer, European AI Office, European Commission</span></li>
+    <li><b>Isabel Barberá</b><span>AI Safety Unit Lead, Dutch Data Protection Authority</span></li>
+    <li><b>Ruxandra Deaconu</b><span>Council of Europe Liaison Office to the EU</span></li>
+    <li><b>Bengüsu Özcan</b><span>Arq Foundation</span></li>
+    <li><b>Naci Cankaya</b><span>Technical Governance Researcher, MIRI</span></li>
+    <li><b>Eliška Andrš</b><span>Policy Researcher, Future of Life Institute</span></li>
+    <li><b>Thomas Lilamand</b><span>Senior Research Scholar, Institute for Law &amp; AI</span></li>
+    <li><b>Samuel Goodger</b><span>Policy Analyst, European Policy Centre</span></li>
+    <li><b>Arslan Jurion</b><span>CeSIA (French Center for AI Safety)</span></li>
+    <li><b>Jonathan Schmidt</b><span>The Future Society</span></li>
+    <li><b>Sven Herrmann</b><span>European AI Governance, The Future Society</span></li>
+    <li><b>Calvin Duff</b><span>Pour Demain Europe</span></li>
+    <li><b>Jimmy Farrell</b><span>Astralis Foundation</span></li>
+    <li><b>Mattias Bjärnemalm</b><span>Secretary General, European Pirates</span></li>
+    <li><b>Jelle Donders</b><span>Strategic Advisor on AI</span></li>
+  </ul>
 
 <h2 id="food">Food &amp; drinks</h2>
 <p>Coffee, tea and snacks are available from 13:30 and during the breaks. Dinner is a buffet from 19:30, catered by Artfood.</p>
